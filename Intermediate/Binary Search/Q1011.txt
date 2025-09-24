@@ -1,0 +1,38 @@
+1011. Capacity To Ship Packages Within D Days
+
+class Solution {
+    public int shipWithinDays(int[] weights, int days) {
+        int max_weight = Integer.MIN_VALUE;
+        int sum = 0;
+        for (int w : weights) {
+            max_weight = Math.max(max_weight, w);
+            sum += w;
+        }
+
+        int left = max_weight;
+        int right = sum;
+
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+
+            int neededDays = 1;
+            int Load = 0;
+
+            for (int w : weights) {
+                if (Load + w > mid) {
+                    neededDays++;
+                    Load = 0;
+                }
+                Load += w;
+            }
+
+            if (neededDays <= days) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        return left;
+    }
+}

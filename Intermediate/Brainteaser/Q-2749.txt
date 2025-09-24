@@ -1,0 +1,18 @@
+2749. Minimum Operations to Make the Integer Zero
+
+class Solution {
+    public int makeTheIntegerZero(int num1, int num2) {
+        for (int k = 1; k <= 64; k++) {
+            long remaining = (long) num1 - (long) k * num2;
+
+            if (remaining < 0) continue;
+
+            int setBits = Long.bitCount(remaining);
+
+            if (setBits <= k && k <= remaining) {
+                return k;
+            }
+        }
+        return -1;
+    }
+}

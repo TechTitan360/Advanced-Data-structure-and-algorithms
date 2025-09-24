@@ -1,0 +1,23 @@
+781. Rabbits in Forest
+
+class Solution {
+    public int numRabbits(int[] answers) {
+        HashMap<Integer, Integer> count = new HashMap<>();
+
+        for(int num : answers){
+            count.put(num, count.getOrDefault(num,0)+1 );
+        }
+        int ans = 0;
+
+        for(Map.Entry<Integer, Integer> entry : count.entrySet()){
+            int y = entry.getKey();
+            int freq = entry.getValue();
+
+            int groups = (freq + y) / (y + 1);
+            ans += groups * (y + 1);
+
+        }
+
+        return ans;
+    }
+}
