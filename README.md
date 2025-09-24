@@ -23,6 +23,7 @@ This repository contains my solutions to various LeetCode problems, organized by
 │   ├── Brainteaser/
 │   ├── Greedy/
 │   ├── Hash Table/
+│   ├── Linked List/
 │   └── Sliding Window/
 └── README.md
 ```
@@ -41,7 +42,7 @@ This repository contains my solutions to various LeetCode problems, organized by
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
 |---------|----------|------------|----------------|------------------|
 | [53. Maximum Subarray](Advanced/Dynamic%20Programming/Q-53.txt) | [Java](Advanced/Dynamic%20Programming/Q-53.txt) | Medium | O(n) | O(1) |
-| [2327. Number of People Aware of a Secret](Advanced/Dynamic%20Programming/Q-2327.txt) | [Java](Advanced/Dynamic%20Programming/Q-2327.txt) | Medium | O(n) | O(n) |
+| [2327. Number of People Aware of a Secret](Advanced/Dynamic%20Programming/Q-2327.txt) | [Java](Advanced/Dynamic%20Programming/Q-2327.txt) | Medium | O(n × forget) | O(n) |
 
 ### Intermediate Level
 
@@ -49,18 +50,18 @@ This repository contains my solutions to various LeetCode problems, organized by
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
 |---------|----------|------------|----------------|------------------|
 | [33. Search in Rotated Sorted Array](Intermediate/Binary%20Search/Q33.txt) | [Java](Intermediate/Binary%20Search/Q33.txt) | Medium | O(log n) | O(1) |
-| [81. Search in Rotated Sorted Array II](Intermediate/Binary%20Search/Q81.txt) | [Java](Intermediate/Binary%20Search/Q81.txt) | Medium | O(log n) | O(1) |
+| [81. Search in Rotated Sorted Array II](Intermediate/Binary%20Search/Q81.txt) | [Java](Intermediate/Binary%20Search/Q81.txt) | Medium | O(n) worst, O(log n) avg | O(1) |
 | [153. Find Minimum in Rotated Sorted Array](Intermediate/Binary%20Search/Q153.txt) | [Java](Intermediate/Binary%20Search/Q153.txt) | Medium | O(log n) | O(1) |
-| [209. Minimum Size Subarray Sum](Intermediate/Binary%20Search/Q209.txt) | [Java](Intermediate/Binary%20Search/Q209.txt) | Medium | O(n log n) | O(1) |
-| [704. Binary Search](Intermediate/Binary%20Search/Q704.txt) | [Java](Intermediate/Binary%20Search/Q704.txt) | Easy | O(log n) | O(1) |
-| [875. Koko Eating Bananas](Intermediate/Binary%20Search/Q875.txt) | [Java](Intermediate/Binary%20Search/Q875.txt) | Medium | O(n log m) | O(1) |
-| [1011. Capacity To Ship Packages Within D Days](Intermediate/Binary%20Search/Q1011.txt) | [Java](Intermediate/Binary%20Search/Q1011.txt) | Medium | O(n log m) | O(1) |
+| [209. Minimum Size Subarray Sum](Intermediate/Binary%20Search/Q209.txt) | [Java](Intermediate/Binary%20Search/Q209.txt) | Medium | O(n) | O(1) |
+| [704. Binary Search](Intermediate/Binary%20Search/Q704.txt) | [Java](Intermediate/Binary%20Search/Q704.txt) | Easy | O(log n) | O(log n) |
+| [875. Koko Eating Bananas](Intermediate/Binary%20Search/Q875.txt) | [Java](Intermediate/Binary%20Search/Q875.txt) | Medium | O(n log max) | O(1) |
+| [1011. Capacity To Ship Packages Within D Days](Intermediate/Binary%20Search/Q1011.txt) | [Java](Intermediate/Binary%20Search/Q1011.txt) | Medium | O(n log sum) | O(1) |
 
 #### 🔢 Bit Manipulation
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
 |---------|----------|------------|----------------|------------------|
-| [2749. Minimum Operations to Make the Integer Zero](Intermediate/Bit%20Manipulation/Q-2749.txt) | [Java](Intermediate/Bit%20Manipulation/Q-2749.txt) | Medium | O(log n) | O(1) |
-| [3495. Kth Smallest Amount With Single Denomination Combination](Intermediate/Bit%20Manipulation/Q-3495.txt) | [Java](Intermediate/Bit%20Manipulation/Q-3495.txt) | Hard | O(2^n) | O(1) |
+| [2749. Minimum Operations to Make the Integer Zero](Intermediate/Bit%20Manipulation/Q-2749.txt) | [Java](Intermediate/Bit%20Manipulation/Q-2749.txt) | Medium | O(64) = O(1) | O(1) |
+| [3495. Kth Smallest Amount With Single Denomination Combination](Intermediate/Bit%20Manipulation/Q-3495.txt) | [Java](Intermediate/Bit%20Manipulation/Q-3495.txt) | Hard | O(q × log r) | O(1) |
 
 #### 🧠 Brainteaser
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
@@ -73,8 +74,8 @@ This repository contains my solutions to various LeetCode problems, organized by
 |---------|----------|------------|----------------|------------------|
 | [11. Container With Most Water](Intermediate/Greedy/Q-11.txt) | [Java](Intermediate/Greedy/Q-11.txt) | Medium | O(n) | O(1) |
 | [781. Rabbits in Forest](Intermediate/Greedy/Q-781.txt) | [Java](Intermediate/Greedy/Q-781.txt) | Medium | O(n) | O(n) |
-| [1733. Minimum Number of People to Teach](Intermediate/Greedy/Q-1733.txt) | [Java](Intermediate/Greedy/Q-1733.txt) | Medium | O(n²) | O(n) |
-| [1792. Maximum Average Pass Ratio](Intermediate/Greedy/Q-1792.txt) | [Java](Intermediate/Greedy/Q-1792.txt) | Medium | O(n log n) | O(n) |
+| [1733. Minimum Number of People to Teach](Intermediate/Greedy/Q-1733.txt) | [Java](Intermediate/Greedy/Q-1733.txt) | Medium | O(n × m + F) | O(n × m) |
+| [1792. Maximum Average Pass Ratio](Intermediate/Greedy/Q-1792.txt) | [Java](Intermediate/Greedy/Q-1792.txt) | Medium | O(n log n + k log n) | O(n) |
 
 #### #️⃣ Hash Table
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
@@ -87,6 +88,13 @@ This repository contains my solutions to various LeetCode problems, organized by
 | [451. Sort Characters By Frequency](Intermediate/Hash%20Table/Q-451.txt) | [Java](Intermediate/Hash%20Table/Q-451.txt) | Medium | O(n log n) | O(n) |
 | [781. Rabbits in Forest](Intermediate/Hash%20Table/Q-781.txt) | [Java](Intermediate/Hash%20Table/Q-781.txt) | Medium | O(n) | O(n) |
 
+#### 🔗 Linked List
+| Problem | Solution | Difficulty | Time Complexity | Space Complexity |
+|---------|----------|------------|----------------|------------------|
+| [206. Reverse Linked List](Intermediate/Linked%20List/Q-206.txt) | [Java](Intermediate/Linked%20List/Q-206.txt) | Easy | O(n) | O(1) |
+| [237. Delete Node in a Linked List](Intermediate/Linked%20List/Q-237.txt) | [Java](Intermediate/Linked%20List/Q-237.txt) | Medium | O(1) | O(1) |
+| [876. Middle of the Linked List](Intermediate/Linked%20List/Q-876.txt) | [Java](Intermediate/Linked%20List/Q-876.txt) | Easy | O(n) | O(1) |
+
 #### 🪟 Sliding Window
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
 |---------|----------|------------|----------------|------------------|
@@ -98,10 +106,10 @@ This repository contains my solutions to various LeetCode problems, organized by
 
 ## 📊 Statistics
 
-- **Total Problems Solved**: 28+
-- **Easy**: 4 problems
-- **Medium**: 20+ problems  
-- **Hard**: 1+ problem
+- **Total Problems Solved**: 28
+- **Easy**: 6 problems
+- **Medium**: 21 problems  
+- **Hard**: 1 problem
 - **Language**: Java
 - **Focus Areas**: Data Structures, Algorithms, Problem Solving
 
@@ -121,7 +129,7 @@ This repository contains my solutions to various LeetCode problems, organized by
 
 ## 🎓 Key Concepts Covered
 
-- **Data Structures**: Arrays, Hash Tables, Trees, Heaps
+- **Data Structures**: Arrays, Hash Tables, Linked Lists, Trees, Heaps
 - **Algorithms**: Binary Search, Dynamic Programming, Greedy, Divide & Conquer
 - **Techniques**: Two Pointers, Sliding Window, Bit Manipulation
 - **Complexity Analysis**: Big O notation for time and space
