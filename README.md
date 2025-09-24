@@ -138,4 +138,4 @@ This repository contains my solutions to various LeetCode problems, organized by
 Feel free to reach out if you have any questions about the implementations or would like to discuss algorithmic approaches!
 
 ---
-**Repository maintained for academic purposes - DSA Course**
+**Repository maintained for academic purposes - ADSA Course**
