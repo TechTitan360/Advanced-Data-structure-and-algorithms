@@ -50,6 +50,7 @@ This repository contains my solutions to various LeetCode problems, organized by
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
 |---------|----------|------------|----------------|------------------|
 | [33. Search in Rotated Sorted Array](Intermediate/Binary%20Search/Q33.txt) | [Java](Intermediate/Binary%20Search/Q33.txt) | Medium | O(log n) | O(1) |
+| [74. Search a 2D Matrix](Intermediate/Linked%20List/Q-74.txt) | [Java](Intermediate/Linked%20List/Q-74.txt) | Medium | O(log m + log n) | O(1) |
 | [81. Search in Rotated Sorted Array II](Intermediate/Binary%20Search/Q81.txt) | [Java](Intermediate/Binary%20Search/Q81.txt) | Medium | O(n) worst, O(log n) avg | O(1) |
 | [153. Find Minimum in Rotated Sorted Array](Intermediate/Binary%20Search/Q153.txt) | [Java](Intermediate/Binary%20Search/Q153.txt) | Medium | O(log n) | O(1) |
 | [209. Minimum Size Subarray Sum](Intermediate/Binary%20Search/Q209.txt) | [Java](Intermediate/Binary%20Search/Q209.txt) | Medium | O(n) | O(1) |
@@ -91,6 +92,7 @@ This repository contains my solutions to various LeetCode problems, organized by
 #### 🔗 Linked List
 | Problem | Solution | Difficulty | Time Complexity | Space Complexity |
 |---------|----------|------------|----------------|------------------|
+| [19. Remove Nth Node From End of List](Intermediate/Linked%20List/Q-19.txt) | [Java](Intermediate/Linked%20List/Q-19.txt) | Medium | O(n) | O(1) |
 | [206. Reverse Linked List](Intermediate/Linked%20List/Q-206.txt) | [Java](Intermediate/Linked%20List/Q-206.txt) | Easy | O(n) | O(1) |
 | [237. Delete Node in a Linked List](Intermediate/Linked%20List/Q-237.txt) | [Java](Intermediate/Linked%20List/Q-237.txt) | Medium | O(1) | O(1) |
 | [876. Middle of the Linked List](Intermediate/Linked%20List/Q-876.txt) | [Java](Intermediate/Linked%20List/Q-876.txt) | Easy | O(n) | O(1) |
@@ -106,9 +108,9 @@ This repository contains my solutions to various LeetCode problems, organized by
 
 ## 📊 Statistics
 
-- **Total Problems Solved**: 28
+- **Total Problems Solved**: 30
 - **Easy**: 6 problems
-- **Medium**: 21 problems  
+- **Medium**: 23 problems  
 - **Hard**: 1 problem
 - **Language**: Java
 - **Focus Areas**: Data Structures, Algorithms, Problem Solving
